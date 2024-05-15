@@ -258,3 +258,56 @@ h1 {
     background-color: #39a1db;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .right-side {
+        min-height: 50vh;
+        align-items: flex-start;
+    }
+
+    .photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .button {
+        width: 80px;
+        height: 30px;
+    }
+
+    .project-box {
+        flex: 1 0 100%;
+        margin: 10px 0;
+    }
+
+    #role-changer {
+        min-width: 250px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .tag {
+        padding: 2px 4px;
+    }
+}
