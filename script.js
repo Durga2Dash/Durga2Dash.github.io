@@ -49,9 +49,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <a href="https://github.com/Durga2Dash/Durga2Dash.github.io/blob/01c07bb3dceeac33065952250c2ba521220d6ef7/CCAC/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail">
-                </a>
+                <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showPDF()">
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -59,6 +57,7 @@ function showContent(section) {
                     <span class="tag">Analytics</span>
                 </div>
             </div>
+            <div id="pdfViewer"></div>
         `,
         'certifications': `
             <div class="project-box">
@@ -122,10 +121,16 @@ function showContent(section) {
     }
 }
 function showResume() {
-var content = document.getElementById('content');
-var resumeUrl = 'https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf';
-content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
-}
+    var content = document.getElementById('content');
+    var resumeUrl = 'https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf';
+    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
+    }
+
+function showPDF() {
+    var pdfUrl = 'https://github.com/Durga2Dash/Durga2Dash.github.io/blob/01c07bb3dceeac33065952250c2ba521220d6ef7/CCAC/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf'; // Replace with your PDF URL
+    var viewer = document.getElementById('pdfViewer');
+    viewer.innerHTML = '<object type="application/pdf" width="100%" height="100%" data="' + pdfUrl + '"></object>';
+  }
 
 document.addEventListener('DOMContentLoaded', function() {
     const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps"];
