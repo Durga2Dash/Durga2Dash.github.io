@@ -7,7 +7,7 @@ function showContent(section) {
         'projects': `
             <div class="project-box">
                 <a href="https://medium.com/@khandelwalritik301196/classifying-craigslist-ads-to-enhance-user-experience-ebbf7b8c732f" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/ML_UnstructuredData.png" alt="Project Thumbnail">
+                    <img src="logo/Craigs.png" alt="Project Thumbnail">
                 </a>
                 <p>Using Machine Learning to predict Craigslist Ads</p>
                 <div class="tags-container">
