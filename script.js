@@ -124,7 +124,7 @@ function showContent(section) {
 function showResume() {
 var content = document.getElementById('content');
 var resumeUrl = 'https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf';
-content.innerHTML = '<object type="application/pdf" width="100%" height="100%" data="' + resumeUrl + '"></object>';
+content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
