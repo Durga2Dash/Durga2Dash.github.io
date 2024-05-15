@@ -237,6 +237,24 @@
             margin-bottom: 21px;
         }
 
+        .tag {
+            display: inline-block;
+            background-color: #4fc3f7;
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 3px 8px;
+            margin: 2px 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .tag:hover {
+            background-color: #39a1db;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -249,10 +267,10 @@
             <div class="name">Durga Madhab Dash</div>
             <div class="description">Data Science || AI/ML (Structured Data & NLP) || Cloud Reliability Engineer || DevOps</div>
             <div class="social-links" style="font-size: 24px;">
-                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin" aria-label="LinkedIn profile" style="margin-right: 10px; color: #333;">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn profile" style="margin-right: 10px; color: #333;">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/yourusername" class="social-btn github" aria-label="GitHub profile" style="color: #333;">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="GitHub profile" style="color: #333;">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="mailto:youremail@example.com" class="social-btn email" aria-label="Email">
@@ -287,74 +305,94 @@
                 'resume': '<h1>Resume</h1><p>This is a placeholder for the resume section.</p>',
                 'projects': `
                     <div class="project-box">
-                        <a href="https://medium.com/@khandelwalritik301196/classifying-craigslist-ads-to-enhance-user-experience-ebbf7b8c732f" target="_blank" class="project-link">
+                        <a href="https://medium.com/@khandelwalritik301196/classifying-craigslist-ads-to-enhance-user-experience-ebbf7b8c732f" target="_blank" rel="noopener noreferrer" class="project-link">
                             <img src="logo/ML_UnstructuredData.png" alt="Project Thumbnail">
                         </a>
-                        <p>Using Machine Learning to predict Craigslist Ads #Python #Machine Learning #NLP</p>
+                        <p>Using Machine Learning to predict Craigslist Ads 
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">NLP</span>
+                        </p>
                     </div>
                     <div class="project-box">
-                        <a href="https://public.tableau.com/app/profile/durga.madhab.dash/viz/Data4Good_v6/Data4GoodParticipation_v6" target="_blank" class="project-link">
+                        <a href="https://public.tableau.com/app/profile/durga.madhab.dash/viz/Data4Good_v6/Data4GoodParticipation_v6" target="_blank" rel="noopener noreferrer" class="project-link">
                             <img src="logo/Tableau_Data4Good.png" alt="Project Thumbnail">
                         </a>
-                        <p>Dashboard showing Data4Good Case Participation #Python #Tableau</p>
+                        <p>Dashboard showing Data4Good Case Participation
+                            <span class="tag">Python</span>
+                            <span class="tag">Tableau</span>
+                        </p>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.google.com" target="_blank" class="project-link">
+                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="project-link">
                             <img src="logo/Predicting_Bankruptcy.png" alt="Project Thumbnail">
                         </a>
-                        <p>Predicting Bankruptcy using Supervised Learning #SAS #Machine Learning #Analytics</p> 
+                        <p>Predicting Bankruptcy using Supervised Learning 
+                            <span class="tag">SAS</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Analytics</span>
+                        </p> 
                     </div>
                     <div class="project-box">
-                        <a href="Add the pdf" target="_blank" class="project-link">
+                        <a href="Add the pdf" target="_blank" rel="noopener noreferrer" class="project-link">
                             <img src="logo/Airbnb_GenAi.png" alt="Project Thumbnail">
                         </a>
-                        <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
+                        <p>Capstone: AI powered financial chatbot to extract financial metrics
+                            <span class="tag">Python</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Google Cloud</span>
+                        </p>
                     </div>
                     <div class="project-box">
-                        <a href="Add the pdf" target="_blank" class="project-link">
+                        <a href="Add the pdf" target="_blank" rel="noopener noreferrer" class="project-link">
                             <img src="logo/CloudComputing_GenAI.png" alt="Project Thumbnail">
                         </a>
-                        <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
+                        <p>NCAA Division 1 Women's basketball Ticket Sales Analysis
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Analytics</span>
+                        </p>
                     </div>
                 `,
                 'certifications': `
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/Coursera-Python.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/DataCamp-PostGresSql.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/Tableau-DesktopSpecialist.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/AWS-CloudPractiotioner.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/AWS-SolutionsArchitect.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/AZ900.jpg" alt="Project Thumbnail">
                         </a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/SAS_Optimization.jpg" alt="Project Thumbnail">
                         <a>
                     </div>
                     <div class="project-box">
-                        <a href="https://www.coursera.org/">
+                        <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
                             <img src="logo/GCP-KubernetesEngine.png" alt="Project Thumbnail">
                         </a>
                     </div>
@@ -362,8 +400,8 @@
                 'contact': `
     <h1>Contact Me</h1>
     <h4>I would be happy to connect about any opportunities or collaborations</h4>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
-    <p>GitHub: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Git Profile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+    <p>GitHub: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Git Profile</a></p>
     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     <p>Address: 1234 Street Name, City, Country</p>
 `
