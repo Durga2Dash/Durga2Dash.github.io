@@ -38,9 +38,7 @@ function showContent(section) {
                 </div> 
             </div>
             <div class="project-box">
-                <a href="Add the pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail">
-                </a>
+                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF()">
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -49,7 +47,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showPDF()">
+                <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showCCACPDF()">
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -126,8 +124,14 @@ function showResume() {
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
-function showPDF() {
-    var pdfUrl = 'https://github.com/Durga2Dash/Durga2Dash.github.io/blob/01c07bb3dceeac33065952250c2ba521220d6ef7/CCAC/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf'; // Replace with your PDF URL
+function showCCACPDF() {
+    var pdfUrl = 'https://storage.googleapis.com/images_ip_2022/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf';
+    var viewer = document.getElementById('pdfViewer');
+    viewer.innerHTML = '<object type="application/pdf" width="100%" height="100%" data="' + pdfUrl + '"></object>';
+  }
+
+  function showIPPDF() {
+    var pdfUrl = 'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf';
     var viewer = document.getElementById('pdfViewer');
     viewer.innerHTML = '<object type="application/pdf" width="100%" height="100%" data="' + pdfUrl + '"></object>';
   }
