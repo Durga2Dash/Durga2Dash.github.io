@@ -201,36 +201,26 @@
             color: #4fc3f7; /* For example, a different color to make it stand out */
             font-weight: bold;
             display: inline-block;
-            width: 250px; /* Fixed width to prevent layout shift */
-            overflow: hidden; /* Hides the text as it moves in and out */
+            min-width: 250px; /* Fixed width to prevent layout shift */
             white-space: nowrap;
-            vertical-align: top;
-            opacity: 0;
+            overflow: hidden; /* Hides the text as it moves in and out */
         }
 
-        /* Animation to slide in from the left */
-        @keyframes slide-in {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        .name-line h3, .name-line h1 {
+            display: inline; 
+            margin: 0; 
+            vertical-align: middle; 
         }
 
-        /* Animation to slide out to the right */
-        @keyframes slide-out {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
+        .name-line h3 {
+            font-size: 1.5rem; 
         }
+
+        .name-line h1 {
+            font-size: 2.5rem; 
+            margin-left: 5px; 
+        }
+
     </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -263,7 +253,10 @@
             <!-- Default content (About) goes here -->
             <div class="load-left">
                 <h2>Hello There!</h2>
-                <span></span><h3>I am </h3><h1>Durga</h1></span>
+                <div class="name-line"> <!-- Container for inline display -->
+                    <h3>I am </h3>
+                    <h1>Durga</h1>
+                </div>
                 <span class="text-container">Welcome to my creative space! I am a <span id="role-changer">Data Scientist</span>!</span>
             </div>
         </div>
@@ -377,27 +370,33 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             const roles = ["Data Scientist", "AI/ML Engineer (Structured Data & NLP)", "Something", "Something"];
-            let currentRole = 0;
+            let currentRoleIndex = 0;
             const roleElement = document.getElementById('role-changer');
+            const typingDelay = 120;
+            const erasingDelay = 60;
+            const newRoleDelay = 2000;
 
-            function updateRole(newRole) {
-                roleElement.textContent = newRole;
-                roleElement.style.animation = 'slide-in 0.5s forwards';
+            function typeRole(role, charIndex) {
+                if (charIndex < role.length) {
+                    roleElement.textContent += role.charAt(charIndex);
+                    setTimeout(() => typeRole(role, charIndex + 1), typingDelay);
+                } else {
+                    setTimeout(eraseRole, newRoleDelay);
+                }
             }
 
-            function changeRole() {
-                roleElement.style.animation = 'slide-out 0.5s forwards'; // Slide out first
-                setTimeout(() => {
-                    updateRole(roles[currentRole]);
-                    currentRole = (currentRole + 1) % roles.length;
-                }, 500); // Wait for the slide-out to finish
+            function eraseRole() {
+                let text = roleElement.textContent;
+                if (text.length > 0) {
+                    roleElement.textContent = text.substring(0, text.length - 1);
+                    setTimeout(eraseRole, erasingDelay);
+                } else {
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    setTimeout(() => typeRole(roles[currentRoleIndex], 0), typingDelay);
+                }
             }
 
-            // Initialize with the first role
-            updateRole(roles[0]);
-            currentRole = 1;
-
-            setInterval(changeRole, 3000);
+            setTimeout(() => typeRole(roles[currentRoleIndex], 0), typingDelay);
         });
 
     </script>
