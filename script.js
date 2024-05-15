@@ -17,7 +17,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <a href="https://public.tableau.com/app/profile/durga.madhab.dash/viz/Data4Good_v6/Data4GoodParticipation_v6" target="_blank" rel="noopener noreferrer" class="project-link">
+                <a href="https://public.tableau.com/app/profile/durga.madhab.dash/vizzes" target="_blank" rel="noopener noreferrer" class="project-link">
                     <img src="logo/Tableau_Data4Good.png" alt="Project Thumbnail">
                 </a>
                 <p>Dashboard showing Data4Good Case Participation</p>
@@ -39,7 +39,7 @@ function showContent(section) {
             </div>
             <div class="project-box">
                 <a href="Add the pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/Airbnb_GenAi.png" alt="Project Thumbnail">
+                    <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail">
                 </a>
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
@@ -50,7 +50,7 @@ function showContent(section) {
             </div>
             <div class="project-box">
                 <a href="Add the pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/CloudComputing_GenAI.png" alt="Project Thumbnail">
+                    <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail">
                 </a>
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
