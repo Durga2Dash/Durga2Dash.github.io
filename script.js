@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function typeRole(role, charIndex) {
         if (charIndex < role.length) {
             roleElement.textContent += role.charAt(charIndex);
-            setTimeout(() => typeRole(role, charIndex + 1), 30);
+            setTimeout(() => typeRole(role, charIndex + 1), 15);
         } else {
             setTimeout(eraseRole, 1500);
         }
