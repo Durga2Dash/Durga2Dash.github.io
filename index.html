@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6; /* Soothing background color for the body */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+        .left-side {
+            width: 25%;
+            background-color: #9bc1bc; /* Soothing teal color for the sidebar */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-side {
+            display: flex; /* Use Flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 75%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #edf6f5; /* Light soothing color for the main content area */
+            height: 100vh; /* Light soothing color for the main content area */
+        }
+        .photo {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 7px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjusts the space between buttons */
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px; /* Adjust based on your logo size */
+            height: 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fff; /* Button background color */
+        }
+
+        .social-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .button {
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 22px;
+            width: 100px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.5); /* Translucent background for buttons */
+            color: #000; /* Text color for buttons */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background-color: #cde0c9; /* Soothing color for skill items */
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .project-box {
+            flex: 1 0 calc(33.33% - 40px); /* Flex grow, shrink, and basis */
+            margin: 10px;
+            /*height: 20vh; Relative height based on viewport height */
+            max-width: calc(33.33% - 40px); /* Maximum width */
+            background-color: #ffffff; /* White background for project boxes */
+            border-radius: 8px; /* Rounded corners for boxes */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            display: flex;
+            flex-direction: column;
+            /*justify-content: space-around;*/
+        }
+        .project-box img {
+            max-width: 100%;
+            border-top-left-radius: 8px; /* Round top corners of image */
+            border-top-right-radius: 8px; /* Round top corners of image */
+        }
+        /*.project-link {
+            text-align: center;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-bottom-left-radius: 8px; 
+            border-bottom-right-radius: 8px; 
+            background: rgba(0, 0, 0, 0.1);
+        }*/
+        .load-left {
+            display: inline-block;
+            overflow: hidden;
+            white-space: normal;
+            animation: fadeIn 7s forwards;
+            text-align: center;
+        }
+        /*@keyframes loadFromLeft {
+        from {
+            width: 0;
+            opacity: 0;
+        }
+        to {
+            width: 100%;
+            opacity: 1;
+        }
+        }*/
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes scaleUp {
+        from {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="photo">
+                <img src="Durga.jpeg" alt="Your Photo" style="border-radius: 50%; width: 100%; height: 100%;">
+            </div>
+            <div class="name">Durga Madhab Dash</div>
+            <div class="description">Aspiring Data Scientist || Cloud Reliability Engineer</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin">
+                    <img src="Logo/linkedin_2.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/yourusername" class="social-btn github">
+                    <img src="Logo/github.jpg" alt="GitHub">
+                </a>
+            </div>
+            <button class="button" onclick="showContent('about')">About</button>
+            <button class="button" onclick="showResume()">Resume</button>
+            <button class="button" onclick="showContent('projects')">Projects</button>
+            <button class="button" onclick="showContent('certifications')">Certifications</button>
+            <button class="button" onclick="showContent('contact')">Contact Me</button>
+        </div>
+        <div class="right-side" id="content">
+            <!-- Default content (About) goes here -->
+            <div class="load-left">
+                <h1>Hello There!!</h1>
+                <span class="text-container">Welcome to my creative space, built using Gen AI & Prompt Engineering. I am glad you are here! Take a peek around to see what I've been up to!</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(section) {
+            var content = document.getElementById('content');
+            // Placeholder content for each section
+            var data = {
+                'about': '<h1>About Me</h1><p>I am an Aspiring Quantitative Analyst/Data Scientist pursuing my Masters in Business Analytics & Information Management at Purdue University with about 5 years of experience in Cloud Site Reliability Engineering & DevOps. As an enthusiastic data scientist, I thrive on turning data puzzles into insightful stories. My journey in data analysis and predictive modeling has been fueled by my passion for solving complex problems using data. With a strong foundation in quantitative modeling, programming, visualization, and cloud I aim to harness the power of data to unlock insignts & drive informed decision making.</p><h2>Technical Skills & Technologies</h2><ul class="skills-list"><li>SQL</li><li>Programming with Python</li><li>Data Analysis & Statistical Modeling</li><li>Visualization with Tableau, Matplotlib, & Seaborn</li><li>Machine Learning (Unstructured Data)</li><li>SAS Enterprise Miner</li><li>Cloud (Amazon Web Services, Microsoft Azure, & Google Cloud Platform)</li><li>Bash Scripting</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Ansible</li><li>Prometheus</li><li>Jenkins</li></ul>',
+                'resume': '<h1>Resume</h1><p>This is a placeholder for the resume section.</p>',
+                'projects': `
+                    <div class="project-box">
+                        <a href="https://medium.com/@khandelwalritik301196/classifying-craigslist-ads-to-enhance-user-experience-ebbf7b8c732f" target="_blank" class="project-link">
+                            <img src="Logo/ML_UnstructuredData.png" alt="Project Thumbnail">
+                        </a>
+                        <p>Using Machine Learning to predict Craigslist Ads #Python #Machine Learning #NLP</p>
+                    </div>
+                    <div class="project-box">
+                        <a href="https://public.tableau.com/app/profile/durga.madhab.dash/viz/Data4Good_v6/Data4GoodParticipation_v6" target="_blank" class="project-link">
+                            <img src="Logo/Tableau_Data4Good.png" alt="Project Thumbnail">
+                        </a>
+                        <p>Dashboard showing Data4Good Case Participation #Python #Tableau</p>
+                    </div>
+                    <div class="project-box">
+                        <a href="https://www.google.com" target="_blank" class="project-link">
+                            <img src="Logo/Predicting_Bankruptcy.png" alt="Project Thumbnail">
+                        </a>
+                        <p>Predicting Bankruptcy using Supervised Learning #SAS #Machine Learning #Analytics</p> 
+                    </div>
+                    <div class="project-box">
+                        <a href="Add the pdf" target="_blank" class="project-link">
+                            <img src="Logo/Airbnb_GenAi.png" alt="Project Thumbnail">
+                        </a>
+                        <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
+                    </div>
+                    <div class="project-box">
+                        <a href="Add the pdf" target="_blank" class="project-link">
+                            <img src="Logo/CloudComputing_GenAI.png" alt="Project Thumbnail">
+                        </a>
+                        <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
+                    </div>
+                `,
+                'certifications': `
+                    <div class="project-box">
+                        <img src="Logo/Coursera-Python.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/DataCamp-PostGresSql.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/Tableau-DesktopSpecialist.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/AWS-CloudPractiotioner.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/AWS-SolutionsArchitect.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/AZ900.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/SAS_Optimization.jpg" alt="Project Thumbnail">
+                    </div>
+                    <div class="project-box">
+                        <img src="Logo/GCP-KubernetesEngine.png" alt="Project Thumbnail">
+                    </div>
+                `,
+                'contact': `
+    <h1>Contact Me</h1>
+    <h4>I would be happy to connect about any opportunities or collaborations</h4>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
+    <p>GitHub: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Git Profile</a></p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Address: 1234 Street Name, City, Country</p>
+`
+            };
+            content.innerHTML = data[section];
+            // Adjust layout for project boxes
+            if (section === 'projects' || section === 'certifications') {
+                content.style.display = 'flex';
+                content.style.flexWrap = 'wrap';
+                content.style.justifyContent = 'space-around';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+        function showResume() {
+        var content = document.getElementById('content');
+        var resumeUrl = 'https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf';
+        content.innerHTML = '<object type="application/pdf" width="100%" height="100%" data="' + resumeUrl + '"></object>';
+    }
+    </script>
+
+</body>
+</html>
