@@ -54,7 +54,7 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 10px; /* Adjusts the space between buttons*/
+            gap: 20px; /* Adjusts the space between buttons*/
             margin-bottom: 20px;
         }
 
@@ -62,11 +62,13 @@
             width: 40px; /* Adjust based on your logo size */
             height: 40px;
             border-radius: 50%;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             background-color: #00bcd4; /* Button background color */
-            transition: transform 0.3s ease;
+            color: inherit;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-decoration: none;
         }
 
         .social-links .linkedin {
@@ -84,6 +86,7 @@
         .social-links a:hover {
             transform: scale(1.1);
             color: #000; /* Icon color on hover */
+            background-color: #0097a7;
         }
 
         .social-btn {
@@ -128,7 +131,17 @@
             padding: 5px 10px;
             border-radius: 5px;
             color: #e0f2f1;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
+
+        .skills-list li:hover {
+            background-color: #546e7a; /* Slightly lighter color on hover */
+            color: #ffffff; /* Change text color to white for better contrast */
+            transform: scale(1.05); /* Slightly enlarge the item */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
         .project-box {
             flex: 1 0 calc(33.33% - 40px); /* Flex grow, shrink, and basis */
             margin: 10px;
