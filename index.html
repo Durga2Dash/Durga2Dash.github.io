@@ -165,17 +165,7 @@
             border-top-left-radius: 8px; /* Round top corners of image */
             border-top-right-radius: 8px; /* Round top corners of image */
         }
-        /*.project-link {
-            text-align: center;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            border-bottom-left-radius: 8px; 
-            border-bottom-right-radius: 8px; 
-            background: rgba(0, 0, 0, 0.1);
-        }*/
+        
         .load-left {
             display: inline-block;
             overflow: hidden;
@@ -183,16 +173,7 @@
             animation: scaleUp 1.5s ease-out forwards;
             text-align: left;
         }
-        /*@keyframes loadFromLeft {
-        from {
-            width: 0;
-            opacity: 0;
-        }
-        to {
-            width: 100%;
-            opacity: 1;
-        }
-        }*/
+        
         @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -219,6 +200,36 @@
         #role-changer {
             color: #4fc3f7; /* For example, a different color to make it stand out */
             font-weight: bold;
+            display: inline-block;
+            width: 250px; /* Fixed width to prevent layout shift */
+            overflow: hidden; /* Hides the text as it moves in and out */
+            white-space: nowrap;
+            vertical-align: top;
+            opacity: 0;
+        }
+
+        /* Animation to slide in from the left */
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animation to slide out to the right */
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -252,7 +263,7 @@
             <!-- Default content (About) goes here -->
             <div class="load-left">
                 <h2>Hello There!</h2>
-                <h3>I am </h3><h1>Name</h1>
+                <span></span><h3>I am </h3><h1>Durga</h1></span>
                 <span class="text-container">Welcome to my creative space! I am a <span id="role-changer">Data Scientist</span>!</span>
             </div>
         </div>
@@ -369,14 +380,24 @@
             let currentRole = 0;
             const roleElement = document.getElementById('role-changer');
 
-            function changeRole() {
-                roleElement.textContent = roles[currentRole];
-                currentRole = (currentRole + 1) % roles.length; // Loop back to the first role
+            function updateRole(newRole) {
+                roleElement.textContent = newRole;
+                roleElement.style.animation = 'slide-in 0.5s forwards';
             }
 
-            // Start the sequence
-            changeRole();
-            setInterval(changeRole, 1500); // Change role every 2000 milliseconds (2 seconds)
+            function changeRole() {
+                roleElement.style.animation = 'slide-out 0.5s forwards'; // Slide out first
+                setTimeout(() => {
+                    updateRole(roles[currentRole]);
+                    currentRole = (currentRole + 1) % roles.length;
+                }, 500); // Wait for the slide-out to finish
+            }
+
+            // Initialize with the first role
+            updateRole(roles[0]);
+            currentRole = 1;
+
+            setInterval(changeRole, 3000);
         });
 
     </script>
