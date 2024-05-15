@@ -238,12 +238,13 @@
         }
 
         .tags-container {
-            padding: 5px 0;
-            line-height: 1.5;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
             gap: 5px;
+            padding: 5px 0;
+            line-height: 1.5;
         }
 
         .tag {
@@ -252,12 +253,10 @@
             color: #ffffff;
             border-radius: 4px;
             padding: 3px 6px;
-            margin: 2px 3px;
             font-size: 0.9rem;
             font-weight: bold;
             text-decoration: none;
             transition: background-color 0.3s;
-            margin: 0;
         }
 
         .tag:hover {
@@ -445,9 +444,9 @@
             function typeRole(role, charIndex) {
                 if (charIndex < role.length) {
                     roleElement.textContent += role.charAt(charIndex);
-                    setTimeout(() => typeRole(role, charIndex + 1), 120);
+                    setTimeout(() => typeRole(role, charIndex + 1), 80);
                 } else {
-                    setTimeout(eraseRole, 2000);
+                    setTimeout(eraseRole, 1500);
                 }
             }
 
@@ -455,7 +454,7 @@
                 let text = roleElement.textContent;
                 if (text.length > 0) {
                     roleElement.textContent = text.substring(0, text.length - 1);
-                    setTimeout(eraseRole, 40);
+                    setTimeout(eraseRole, 30);
                 } else {
                     currentRoleIndex = (currentRoleIndex + 1) % roles.length;
                     typeRole(roles[currentRoleIndex], 0);  // Immediately start typing the new role
