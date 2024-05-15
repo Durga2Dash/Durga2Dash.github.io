@@ -54,8 +54,29 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 10px; /* Adjusts the space between buttons */
+            gap: 10px; /* Adjusts the space between buttons*/
             margin-bottom: 20px;
+        }
+
+        .social-links a {
+            width: 40px; /* Adjust based on your logo size */
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #00bcd4; /* Button background color */
+            color: #0077b5; /* Default color for LinkedIn */
+            transition: transform 0.3s ease;
+        }
+
+        .social-links .github {
+            color: #333; /* Default color for GitHub */
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            color: #000; /* Icon color on hover */
         }
 
         .social-btn {
@@ -69,12 +90,12 @@
             background-color: #00bcd4; /* Button background color */
         }
 
-        .social-btn img {
+        /*.social-btn img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
-        }
+        }*/
         .button {
             margin-bottom: 10px;
             padding: 10px;
@@ -169,6 +190,7 @@
     }
     </style>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <body>
     <div class="container">
         <div class="left-side">
@@ -177,12 +199,12 @@
             </div>
             <div class="name">Durga Madhab Dash</div>
             <div class="description">Data Science || AI/ML (Structured Data & NLP) || Cloud Reliability Engineer || DevOps</div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin">
-                    <img src="logo/linkedin_2.png" alt="LinkedIn">
+            <div class="social-links" style="font-size: 24px;">
+                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin" aria-label="LinkedIn profile" style="margin-right: 10px; color: #0077b5;">
+                    <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/yourusername" class="social-btn github">
-                    <img src="logo/github.jpg" alt="GitHub">
+                <a href="https://github.com/yourusername" class="social-btn github" aria-label="GitHub profile" style="color: #333;">
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <button class="button" onclick="showContent('about')">About</button>
