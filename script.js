@@ -105,10 +105,10 @@ function showContent(section) {
         'contact': `
 <h1>Contact Me</h1>
 <h4>I would be happy to connect about any opportunities or collaborations</h4>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
-<p>GitHub: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Git Profile</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/durgamadhabdash" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+<p>GitHub: <a href="https://github.com/Durga2Dash" target="_blank" rel="noopener noreferrer">Git Profile</a></p>
 <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-<p>Address: 1234 Street Name, City, Country</p>
+<p>Address: West Lafayette, Indiana, United States</p>
 `
     };
     content.innerHTML = data[section];
