@@ -44,8 +44,7 @@ function showContent(section) {
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">NLP</span>
+                    <span class="tag">LLM & NLP</span>
                     <span class="tag">Google Cloud</span>
                 </div>
             </div>
@@ -136,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function typeRole(role, charIndex) {
         if (charIndex < role.length) {
             roleElement.textContent += role.charAt(charIndex);
-            setTimeout(() => typeRole(role, charIndex + 1), 80);
+            setTimeout(() => typeRole(role, charIndex + 1), 50);
         } else {
             setTimeout(eraseRole, 1500);
         }
@@ -149,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(eraseRole, 15);
         } else {
             currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-            typeRole(roles[currentRoleIndex], 0);  // Immediately start typing the new role
+            typeRole(roles[currentRoleIndex], 0);
         }
     }
 
