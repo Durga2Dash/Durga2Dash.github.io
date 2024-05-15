@@ -72,7 +72,8 @@
         }
 
         .social-links .linkedin {
-            color: #0077b5; /* Default color for LinkedIn */
+            /*color: #0077b5;  Default color for LinkedIn */
+            color: #333
         }
 
         .social-links .github {
@@ -80,7 +81,8 @@
         }
 
         .social-links .email {
-            color: #d14836; /* Default color for email */
+            /*color: #d14836;  Default color for email */
+            color: #333;
         }
 
         .social-links a:hover {
@@ -124,6 +126,7 @@
         .skills-list {
             list-style-type: none;
             padding: 0;
+            overflow: hidden;
         }
         .skills-list li {
             background-color: #455a64; /* Soothing color for skill items */
@@ -133,13 +136,14 @@
             color: #e0f2f1;
             transition: all 0.3s ease;
             cursor: pointer;
+            box-shadow: inset 0 0 0 white;
         }
 
         .skills-list li:hover {
             background-color: #546e7a; /* Slightly lighter color on hover */
             color: #ffffff; /* Change text color to white for better contrast */
-            transform: scale(1.05); /* Slightly enlarge the item */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 5px 9px;
         }
 
         .project-box {
