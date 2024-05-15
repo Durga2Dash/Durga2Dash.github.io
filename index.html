@@ -35,6 +35,8 @@
             overflow-y: auto;
             background-color: #29434e; /* Light soothing color for the main content area */
             height: 100vh; /* Light soothing color for the main content area */
+            color: #e0f7fa;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         .photo {
             width: 100px;
@@ -178,7 +180,7 @@
             display: inline-block;
             overflow: hidden;
             white-space: normal;
-            animation: fadeIn 7s forwards;
+            animation: scaleUp 1.5s ease-out forwards;
             text-align: center;
         }
         /*@keyframes loadFromLeft {
@@ -192,23 +194,27 @@
         }
         }*/
         @keyframes fadeIn {
-        from {
-            opacity: 0;
+        from { opacity: 0; }
+        to { opacity: 1; }
         }
-        to {
-            opacity: 1;
+
+        @keyframes scaleUp {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; } /* Overshoot slightly for a dynamic effect */
+            100% { transform: scale(1); opacity: 1; }
         }
-    }
-    @keyframes scaleUp {
-        from {
-            transform: scale(0.5);
-            opacity: 0;
+
+        h1 {
+            font-size: 2.5rem; /* Larger font size for the header */
+            margin-bottom: 0.5em; /* Space between the header and text */
+            color: #80deea; /* Lighter accent color for emphasis */
         }
-        to {
-            transform: scale(1);
-            opacity: 1;
+
+        .text-container {
+            font-size: 1.2rem;
+            opacity: 0.9; /* Slightly translucent for a layered effect */
+            animation: fadeIn 3s ease-in-out 1s forwards; /* Delayed fade-in for text */
         }
-    }
     </style>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -221,7 +227,7 @@
             <div class="name">Durga Madhab Dash</div>
             <div class="description">Data Science || AI/ML (Structured Data & NLP) || Cloud Reliability Engineer || DevOps</div>
             <div class="social-links" style="font-size: 24px;">
-                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin" aria-label="LinkedIn profile" style="margin-right: 10px; color: #0077b5;">
+                <a href="https://www.linkedin.com/in/yourprofile" class="social-btn linkedin" aria-label="LinkedIn profile" style="margin-right: 10px; color: #333;">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/yourusername" class="social-btn github" aria-label="GitHub profile" style="color: #333;">
