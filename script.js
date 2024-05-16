@@ -35,7 +35,7 @@ function showContent(section) {
                 </div> 
             </div>
             <div class="project-box">
-                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF(0)">
+                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF()">
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -120,27 +120,11 @@ function showResume() {
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
-var pdfUrls = [
-    'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf',
-    'https://storage.googleapis.com/images_ip_2022/FinalPPTIP_v1.pdf'
-];
-
-var currentIndex = 0;
-
-function showIPPDF(index) {
+function showIPPDF() {
     var content = document.getElementById('content');
-    currentIndex = index; 
-
-    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdfUrls[currentIndex] + '"></object>' +
-        '<div style="text-align: center; margin-top: 10px;">' +
-        (currentIndex > 0 ? '<button onclick="showIPPDF(currentIndex - 1)">Previous</button>' : '') +
-        (currentIndex < pdfUrls.length - 1 ? '<button onclick="showIPPDF(currentIndex + 1)">Next</button>' : '') +
-        '</div>';
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    showIPPDF(0);
-});
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf';
+    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
+    }
     
 function showCCACPDF() {
     var content = document.getElementById('content');
