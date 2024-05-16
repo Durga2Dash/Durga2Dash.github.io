@@ -143,7 +143,7 @@ function navigatePDF(direction) {
     if (newIndex < 0 || newIndex >= pdfUrls.length) {
         return;
     }
-    showPDF(newIndex);
+    showIPPDF(newIndex);
 }
     
 function showCCACPDF() {
