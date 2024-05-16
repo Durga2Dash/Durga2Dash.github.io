@@ -138,6 +138,48 @@ function showMinePDF() {
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
+// Animated Scatter Chart
+const scatterCtx = document.getElementById('animatedScatterChart').getContext('2d');
+const scatterData = {
+    datasets: [{
+        label: 'Scatter Dataset',
+        data: Array.from({length: 50}, () => ({
+            x: Math.random() * 100,
+            y: Math.random() * 100
+        })),
+        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+    }]
+};
+
+const scatterOptions = {
+    scales: {
+        x: {
+            type: 'linear',
+            position: 'bottom'
+        }
+    },
+    animation: {
+        duration: 2000, // Animation duration in milliseconds
+        easing: 'easeInOutQuad' // Animation easing
+    }
+};
+
+const scatterChart = new Chart(scatterCtx, {
+    type: 'scatter',
+    data: scatterData,
+    options: scatterOptions
+});
+
+function updateScatterChart() {
+    scatterChart.data.datasets[0].data = Array.from({length: 50}, () => ({
+        x: Math.random() * 100,
+        y: Math.random() * 100
+    }));
+    scatterChart.update();
+}
+
+setInterval(updateScatterChart, 4000); // Update scatter plot every 4 seconds
+
 document.addEventListener('DOMContentLoaded', function() {
     const roles = ["Data Science", "Winning Imaginary Arguments", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "Napping", "DevOps", "Laughing at My Own Jokes"];
     let currentRoleIndex = 0;

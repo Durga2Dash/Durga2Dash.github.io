@@ -6,6 +6,7 @@
     <title>Durga</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -34,15 +35,18 @@
             <button class="button" onclick="showContent('contact')"><i class="fa-solid fa-envelope"></i><span>Contact Me</span></button>
         </div>
         <div class="right-side" id="content">
-            <div class="load-left">
-                <h2>Hello There! <i class="fas fa-hand-paper"></i></h2>
-                <span class="text-container">Welcome to my space!</span>
-                <div class="name-line">
-                    <h3>I am </h3>
-                    <h1>Durga,</h1>
-                    <h3>MS BAIM Student @ Purdue <i class="fa-solid fa-graduation-cap"></i></h3>
+            <div class="chart-container">
+                <div class="load-left">
+                    <h2>Hello There! <i class="fas fa-hand-paper"></i></h2>
+                    <span class="text-container">Welcome to my space!</span>
+                    <div class="name-line">
+                        <h3>I am </h3>
+                        <h1>Durga,</h1>
+                        <h3>MS BAIM Student @ Purdue <i class="fa-solid fa-graduation-cap"></i></h3>
+                    </div>
+                    <span class="text-container">Passionate about <span id="role-changer"></span></span>
+                    <canvas id="animatedScatterChart" style="margin-top: 20px;"></canvas>
                 </div>
-                <span class="text-container">Passionate about <span id="role-changer"></span></span>
             </div>
         </div>
     </div>
