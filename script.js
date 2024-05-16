@@ -61,11 +61,6 @@ function showContent(section) {
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
-                    <img src="logo/DataCamp-PostGresSql.jpg" alt="Project Thumbnail">
-                </a>
-            </div>
-            <div class="project-box">
                 <a href="https://www.credly.com/badges/131975ff-6dc2-4844-ad6e-124c59f9a865/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/Tableau-DesktopSpecialist.jpg" alt="Project Thumbnail">
                 </a>
@@ -89,6 +84,11 @@ function showContent(section) {
                 <a href="https://www.credly.com/badges/d05662f2-119a-4d9b-9b3e-9ddb3181f98d/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/SAS_Optimization.jpg" alt="Project Thumbnail">
                 <a>
+            </div>
+            <div class="project-box">
+                <a href="https://www.datacamp.com/statement-of-accomplishment/track/ebb110f58467ca67ba103431d479a0294ac0868a?raw=1" target="_blank" rel="noopener noreferrer" >
+                    <img src="logo/DataCamp-PostGresSql.jpg" alt="Project Thumbnail">
+                </a>
             </div>
             <div class="project-box">
                 <a href="https://www.coursera.org/account/accomplishments/certificate/VZSCEPKUZDW9" target="_blank" rel="noopener noreferrer" >
