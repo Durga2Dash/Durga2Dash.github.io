@@ -138,6 +138,18 @@ function showMinePDF() {
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
+
+// Function to generate sine wave data with noise
+function generateSineWaveData(points, amplitude, frequency, noiseLevel) {
+    const data = [];
+    for (let i = 0; i < points; i++) {
+        const x = i / frequency;
+        const y = amplitude * Math.sin(x) + (Math.random() * 2 - 1) * noiseLevel;
+        data.push({ x, y });
+    }
+    return data;
+}
+
 // Animated Scatter Chart
 const scatterCtx = document.getElementById('animatedScatterChart').getContext('2d');
 const scatterData = {
@@ -180,10 +192,7 @@ const scatterChart = new Chart(scatterCtx, {
 });
 
 function updateScatterChart() {
-    scatterChart.data.datasets[0].data = Array.from({length: 50}, () => ({
-        x: Math.random() * 100,
-        y: Math.random() * 100
-    }));
+    scatterChart.data.datasets[0].data = generateSineWaveData(100, 10, 2, 1);
     scatterChart.update();
 }
 
