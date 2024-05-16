@@ -16,16 +16,6 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <a href="https://public.tableau.com/app/profile/durga.madhab.dash/vizzes" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/Tableau_Data4Good.png" alt="Project Thumbnail">
-                </a>
-                <p>Dashboard showing Data4Good Case Participation</p>
-                <div class="tags-container">
-                    <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
-                    <span class="tag"><i class="fa-solid fa-tag"></i> Tableau</span>
-                </div>
-            </div>
-            <div class="project-box">
                 <img src="logo/Predicting_Bankruptcy.png" alt="Project Thumbnail" onclick="showMinePDF()">
                 <p>Predicting Bankruptcy using Supervised Learning</p>
                 <div class="tags-container">
@@ -50,6 +40,16 @@ function showContent(section) {
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> ML</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> Analytics</span>
+                </div>
+            </div>
+            <div class="project-box">
+                <a href="https://public.tableau.com/app/profile/durga.madhab.dash/vizzes" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <img src="logo/Tableau_Data4Good.png" alt="Project Thumbnail">
+                </a>
+                <p>Tableau Dashboards</p>
+                <div class="tags-container">
+                    <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i> Tableau</span>
                 </div>
             </div>
         `,
@@ -116,7 +116,7 @@ function showContent(section) {
 }
 function showResume() {
     var content = document.getElementById('content');
-    var resumeUrl = 'https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf';
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Resume.pdf';
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
