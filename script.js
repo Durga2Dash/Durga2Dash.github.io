@@ -154,8 +154,17 @@ const scatterData = {
 const scatterOptions = {
     scales: {
         x: {
+            display: false,
             type: 'linear',
             position: 'bottom'
+        },
+        y: {
+            display: false
+        }
+    },
+    plugins: {
+        legend: {
+            display: false
         }
     },
     animation: {
