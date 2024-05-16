@@ -10,9 +10,9 @@ function showContent(section) {
                 </a>
                 <p>Using Machine Learning to predict Craigslist Ads</p>
                 <div class="tags-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">ML</span>
-                    <span class="tag">NLP</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>ML</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>NLP</span>
                 </div>
             </div>
             <div class="project-box">
@@ -21,35 +21,35 @@ function showContent(section) {
                 </a>
                 <p>Dashboard showing Data4Good Case Participation</p>
                 <div class="tags-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">Tableau</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Tableau</span>
                 </div>
             </div>
             <div class="project-box">
                 <img src="logo/Predicting_Bankruptcy.png" alt="Project Thumbnail" onclick="showMinePDF()">
                 <p>Predicting Bankruptcy using Supervised Learning</p>
                 <div class="tags-container">
-                    <span class="tag">SAS</span>
-                    <span class="tag">ML</span>
-                    <span class="tag">Analytics</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>SAS</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>ML</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Analytics</span>
                 </div> 
             </div>
             <div class="project-box">
                 <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF()">
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">LLM & NLP</span>
-                    <span class="tag">Google Cloud</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>LLM & NLP</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Google Cloud</span>
                 </div>
             </div>
             <div class="project-box">
                 <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showCCACPDF()">
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">ML</span>
-                    <span class="tag">Analytics</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>ML</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i>Analytics</span>
                 </div>
             </div>
         `,
