@@ -139,7 +139,7 @@ function showMinePDF() {
     }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps"];
+    const roles = ["Data Science", "Winning Imaginary Arguments", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "Napping", "DevOps", "Laughing at My Own Jokes"];
     let currentRoleIndex = 0;
     const roleElement = document.getElementById('role-changer');
 
