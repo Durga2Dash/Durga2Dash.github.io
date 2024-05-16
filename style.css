@@ -134,6 +134,8 @@ body {
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: inset 0 0 0 white;
+    display: flex;
+    align-items: center;
 }
 
 .skills-list li:hover {
@@ -141,6 +143,13 @@ body {
     color: #ffffff;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 5px 9px;
+}
+
+.skills-list li i {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .project-box {
