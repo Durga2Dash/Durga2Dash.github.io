@@ -56,7 +56,7 @@ function showContent(section) {
         `,
         'certifications': `
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://coursera.org/verify/specialization/4HHPN9F3R93P" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/Coursera-Python.jpg" alt="Project Thumbnail">
                 </a>
             </div>
@@ -66,32 +66,32 @@ function showContent(section) {
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.credly.com/badges/131975ff-6dc2-4844-ad6e-124c59f9a865/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/Tableau-DesktopSpecialist.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.credly.com/badges/a943f592-f97b-4ba3-88c0-3c3194e0e309" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/AWS-CloudPractiotioner.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.credly.com/badges/31fc3ba5-c1df-4e9b-9ba5-d7fd78d55d69/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/AWS-SolutionsArchitect.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.credly.com/badges/7b9d68ae-14c4-4fe5-b349-1ec48cb602d0" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/AZ900.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.credly.com/badges/d05662f2-119a-4d9b-9b3e-9ddb3181f98d/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/SAS_Optimization.jpg" alt="Project Thumbnail">
                 <a>
             </div>
             <div class="project-box">
-                <a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer" >
+                <a href="https://www.coursera.org/account/accomplishments/certificate/VZSCEPKUZDW9" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/GCP-KubernetesEngine.png" alt="Project Thumbnail">
                 </a>
             </div>
@@ -99,10 +99,10 @@ function showContent(section) {
         'contact': `
 <h1>Contact Me</h1>
 <h4>I would be happy to connect about any opportunities or collaborations</h4>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/durgamadhabdash" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
-<p>GitHub: <a href="https://github.com/Durga2Dash" target="_blank" rel="noopener noreferrer">Git Profile</a></p>
-<p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-<p>Address: West Lafayette, Indiana, United States</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/durgamadhabdash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">LinkedIn Profile</a></p>
+<p>GitHub: <a href="https://github.com/Durga2Dash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">Git Profile</a></p>
+<p>Email: <a href="mailto:your.email@example.com" style="font-weight: bold; color: black;">your.email@example.com</a></p>
+<p>Location: West Lafayette, Indiana, United States</p>
 `
     };
     content.innerHTML = data[section];
