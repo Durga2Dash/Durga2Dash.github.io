@@ -27,9 +27,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/Predicting_Bankruptcy.png" alt="Project Thumbnail">
-                </a>
+                <img src="logo/Predicting_Bankruptcy.png" alt="Project Thumbnail" onclick="showMinePDF()">
                 <p>Predicting Bankruptcy using Supervised Learning</p>
                 <div class="tags-container">
                     <span class="tag">SAS</span>
@@ -47,9 +45,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <a href="https://storage.googleapis.com/images_ip_2022/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail">
-                </a>
+                <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showCCACPDF()">
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -129,7 +125,19 @@ function showIPPDF() {
     var content = document.getElementById('content');
     var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf';
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
-    }    
+    } 
+    
+function showCCACPDF() {
+    var content = document.getElementById('content');
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/2024%20Crossroads%20Runners%20-%20Purdue%20University.pdf';
+    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
+    }
+
+function showMinePDF() {
+    var content = document.getElementById('content');
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/DataMining_Final_Project.pdf';
+    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
+    }
 
 document.addEventListener('DOMContentLoaded', function() {
     const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps"];
