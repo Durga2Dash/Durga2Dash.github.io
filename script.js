@@ -97,7 +97,7 @@ function showContent(section) {
         `,
         'contact': `
 <h1>Contact Me</h1>
-<h4>I would be happy to connect about any opportunities or collaborations</h4>
+<h4>I would be happy to connect about any opportunities or collaborations &#x1F600;</h4>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/durgamadhabdash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">LinkedIn Profile</a></p>
 <p>GitHub: <a href="https://github.com/Durga2Dash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">Git Profile</a></p>
 <!--<p>Email: <a href="mailto:your.email@example.com" style="font-weight: bold; color: black;">your.email@example.com</a></p>-->
