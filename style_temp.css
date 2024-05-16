@@ -69,8 +69,7 @@ body {
 }
 
 .social-links .linkedin {
-    /*color: #0077b5;  Default color for LinkedIn */
-    color: #333
+    color: #333;
 }
 
 .social-links .github {
@@ -78,7 +77,6 @@ body {
 }
 
 .social-links .email {
-    /*color: #d14836;*/
     color: #333;
 }
 
@@ -201,7 +199,6 @@ body {
     display: inline-block;
     overflow: hidden;
     white-space: normal;
-    /*animation: scaleUp 1.5s ease-out forwards;*/
     text-align: left;
 }
 
@@ -225,7 +222,6 @@ h1 {
 .text-container {
     font-size: 1.2rem;
     opacity: 0.9;
-    /*animation: fadeIn 3s ease-in-out 1s forwards;*/
 }
 
 .name-line h3, .name-line h1, #role-changer {
@@ -282,57 +278,4 @@ h1 {
 .tag:hover {
     background-color: #0288d1;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left-side, .right-side {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
-
-    .right-side {
-        min-height: 50vh;
-        align-items: flex-start;
-    }
-
-    .photo {
-        width: 80px;
-        height: 80px;
-    }
-
-    .name {
-        font-size: 16px;
-    }
-
-    .social-links a {
-        width: 30px;
-        height: 30px;
-    }
-
-    .button {
-        width: 80px;
-        height: 30px;
-    }
-
-    .project-box {
-        flex: 1 0 100%;
-        margin: 10px 0;
-    }
-
-    #role-changer {
-        min-width: 250px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .tag {
-        padding: 2px 4px;
-    }
 }
