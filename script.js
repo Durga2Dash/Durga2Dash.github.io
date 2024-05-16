@@ -130,20 +130,19 @@ var currentIndex = 0;
 
 function showIPPDF(index) {
     var content = document.getElementById('content');
-    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdfUrls[index] + '"></object>' +
-        '<div style="text-align: center; margin-top: 10px;">' +
-        (index > 0 ? '<button onclick="showPDF(currentIndex - 1)">Previous</button>' : '') +
-        (index < pdfUrls.length - 1 ? '<button onclick="showPDF(currentIndex + 1)">Next</button>' : '') +
-        '</div>';
-    currentIndex = index;
-} 
+    currentIndex = index; 
 
-function navigatePDF(direction) {
-    var newIndex = currentIndex + direction;
-    if (newIndex >= 0 && newIndex < pdfUrls.length) {
-        showIPPDF(newIndex);
-    }
+    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdf  
+Urls[currentIndex] + '"></object>' +
+        '<div style="text-align: center; margin-top: 10px;">' +
+        (currentIndex > 0 ? '<button onclick="showIPPDF(currentIndex - 1)">Previous</button>' : '') +  
+        (currentIndex < pdfUrls.length - 1 ? '<button onclick="showIPPDF(currentIndex + 1)">Next</button>' : '') + 
+        '</div>';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    showIPPDF(0); 
+});
     
 function showCCACPDF() {
     var content = document.getElementById('content');
