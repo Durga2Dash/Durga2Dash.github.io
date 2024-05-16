@@ -36,7 +36,7 @@ function showContent(section) {
                 </div> 
             </div>
             <div class="project-box">
-                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF()">
+                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF(0)">
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag">Python</span>
@@ -101,7 +101,7 @@ function showContent(section) {
 <h4>I would be happy to connect about any opportunities or collaborations</h4>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/durgamadhabdash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">LinkedIn Profile</a></p>
 <p>GitHub: <a href="https://github.com/Durga2Dash" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: black;">Git Profile</a></p>
-<p>Email: <a href="mailto:your.email@example.com" style="font-weight: bold; color: black;">your.email@example.com</a></p>
+<!--<p>Email: <a href="mailto:your.email@example.com" style="font-weight: bold; color: black;">your.email@example.com</a></p>-->
 <p>Location: West Lafayette, Indiana, United States</p>
 `
     };
@@ -121,11 +121,30 @@ function showResume() {
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
-function showIPPDF() {
+var pdfUrls = [
+    'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf',
+    'https://storage.googleapis.com/images_ip_2022/FinalPPTIP_v1.pdf'
+];
+
+var currentIndex = 0;
+
+function showIPPDF(index) {
     var content = document.getElementById('content');
-    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf';
-    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
-    } 
+    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdfUrls[index] + '"></object>' +
+        '<div style="text-align: center; margin-top: 10px;">' +
+        '<button onclick="navigatePDF(-1)">Previous</button>' +
+        '<button onclick="navigatePDF(1)">Next</button>' +
+        '</div>';
+    currentIndex = index;
+} 
+
+function navigatePDF(direction) {
+    var newIndex = currentIndex + direction;
+    if (newIndex < 0 || newIndex >= pdfUrls.length) {
+        return;
+    }
+    showPDF(newIndex);
+}
     
 function showCCACPDF() {
     var content = document.getElementById('content');
