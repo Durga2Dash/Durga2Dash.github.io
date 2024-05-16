@@ -1,6 +1,5 @@
 function showContent(section) {
     var content = document.getElementById('content');
-    // Placeholder content for each section
     var data = {
         'about': '<h1>About Me</h1><p>I am an Aspiring Quantitative Analyst/Data Scientist pursuing my Masters in Business Analytics & Information Management at Purdue University with about 5 years of experience in Cloud Site Reliability Engineering & DevOps. As an enthusiastic data scientist, I thrive on turning data puzzles into insightful stories. My journey in data analysis and predictive modeling has been fueled by my passion for solving complex problems using data. With a strong foundation in quantitative modeling, programming, visualization, and cloud I aim to harness the power of data to unlock insignts & drive informed decision making.</p><h2>Technical Skills & Technologies</h2><ul class="skills-list"><li>SQL</li><li>Programming with Python</li><li>Data Analysis & Statistical Modeling</li><li>Visualization with Tableau, Matplotlib, & Seaborn</li><li>Machine Learning (Unstructured Data)</li><li>SAS Enterprise Miner</li><li>Cloud (Amazon Web Services, Microsoft Azure, & Google Cloud Platform)</li><li>Bash Scripting</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Ansible</li><li>Prometheus</li><li>Jenkins</li></ul>',
         'resume': '<h1>Resume</h1><p>This is a placeholder for the resume section.</p>',
@@ -132,16 +131,15 @@ function showIPPDF(index) {
     var content = document.getElementById('content');
     currentIndex = index; 
 
-    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdf  
-Urls[currentIndex] + '"></object>' +
+    content.innerHTML = '<object type="application/pdf" width="100%" height="90%" data="' + pdfUrls[currentIndex] + '"></object>' +
         '<div style="text-align: center; margin-top: 10px;">' +
-        (currentIndex > 0 ? '<button onclick="showIPPDF(currentIndex - 1)">Previous</button>' : '') +  
-        (currentIndex < pdfUrls.length - 1 ? '<button onclick="showIPPDF(currentIndex + 1)">Next</button>' : '') + 
+        (currentIndex > 0 ? '<button onclick="showIPPDF(currentIndex - 1)">Previous</button>' : '') +
+        (currentIndex < pdfUrls.length - 1 ? '<button onclick="showIPPDF(currentIndex + 1)">Next</button>' : '') +
         '</div>';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    showIPPDF(0); 
+    showIPPDF(0);
 });
     
 function showCCACPDF() {
