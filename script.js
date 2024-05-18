@@ -6,7 +6,7 @@ function showContent(section) {
         'projects': `
             <div class="project-box">
                 <a href="https://medium.com/@khandelwalritik301196/classifying-craigslist-ads-to-enhance-user-experience-ebbf7b8c732f" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <img src="logo/Craigs.png" alt="Project Thumbnail">
+                    <img src="logo/Craigs_Ad.png" alt="Project Thumbnail">
                 </a>
                 <p>Using Machine Learning to predict Craigslist Ads</p>
                 <div class="tags-container">
@@ -25,7 +25,7 @@ function showContent(section) {
                 </div> 
             </div>
             <div class="project-box">
-                <img src="logo/AI-PoweredBot.png" alt="Project Thumbnail" onclick="showIPPDF()">
+                <img src="logo/Poster_Day.png" alt="Project Thumbnail" onclick="showIPPDF()">
                 <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
@@ -34,7 +34,7 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <img src="logo/NCAA_womens_basketball.png" alt="Project Thumbnail" onclick="showCCACPDF()">
+                <img src="logo/ccac.png" alt="Project Thumbnail" onclick="showCCACPDF()">
                 <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
