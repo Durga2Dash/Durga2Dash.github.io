@@ -199,7 +199,7 @@ function updateScatterChart() {
 setInterval(updateScatterChart, 4000); // Update scatter plot every 4 seconds
 
 document.addEventListener('DOMContentLoaded', function() {
-    const roles = ["Data Science", "Winning Imaginary Arguments", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "Napping", "DevOps", "Laughing at My Own Jokes"];
+    const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps", "Laughing at My Own Jokes", "Winning Imaginary Arguments", "Napping"];
     let currentRoleIndex = 0;
     const roleElement = document.getElementById('role-changer');
 
