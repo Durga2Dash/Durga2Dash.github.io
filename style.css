@@ -26,6 +26,7 @@ body.light-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 body.light-theme .left-side {
     background-color: #f0f0f0;
