@@ -26,7 +26,7 @@ function showContent(section) {
             </div>
             <div class="project-box">
                 <img src="logo/Poster_Day.png" alt="Project Thumbnail" onclick="showIPPDF()">
-                <p>Capstone: AI powered financial chatbot to extract financial metrics</p>
+                <p>Capstone (Poster): AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> LLM & NLP</span>
@@ -34,12 +34,12 @@ function showContent(section) {
                 </div>
             </div>
             <div class="project-box">
-                <img src="logo/ccac.png" alt="Project Thumbnail" onclick="showCCACPDF()">
-                <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
+                <img src="logo/Poster_Day.png" alt="Project Thumbnail" onclick="showIPPDF2()">
+                <p>Capstone (Presentation): AI powered financial chatbot to extract financial metrics</p>
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
-                    <span class="tag"><i class="fa-solid fa-tag"></i> ML</span>
-                    <span class="tag"><i class="fa-solid fa-tag"></i> Analytics</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i> LLM & NLP</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i> Google Cloud</span>
                 </div>
             </div>
             <div class="project-box">
@@ -50,6 +50,15 @@ function showContent(section) {
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> Tableau</span>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="logo/ccac.png" alt="Project Thumbnail" onclick="showCCACPDF()">
+                <p>NCAA Division 1 Women's basketball Ticket Sales Analysis</p>
+                <div class="tags-container">
+                    <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i> ML</span>
+                    <span class="tag"><i class="fa-solid fa-tag"></i> Analytics</span>
                 </div>
             </div>
         `,
@@ -123,6 +132,12 @@ function showResume() {
 function showIPPDF() {
     var content = document.getElementById('content');
     var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Team_Group_11_IP.pdf';
+    content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
+    }
+
+function showIPPDF2() {
+    var content = document.getElementById('content');
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/FinalPPTIP_v1.pdf';
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
     
