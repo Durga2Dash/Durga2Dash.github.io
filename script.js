@@ -213,6 +213,20 @@ function updateScatterChart() {
 
 setInterval(updateScatterChart, 4000); // Update scatter plot every 4 seconds
 
+function showMobileWarning() {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        document.getElementById('mobile-warning').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('mobile-warning').style.display = 'none';
+            document.getElementById('block_content').style.display = 'block';
+        }, 3000); // 3 seconds
+    } else {
+        document.getElementById('block_content').style.display = 'block';
+    }
+}
+
+window.onload = showMobileWarning;
+
 document.addEventListener('DOMContentLoaded', function() {
     const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps", "Laughing at My Own Jokes", "Winning Imaginary Arguments", "Napping"];
     let currentRoleIndex = 0;
