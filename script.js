@@ -214,7 +214,7 @@ function updateScatterChart() {
 setInterval(updateScatterChart, 4000); // Update scatter plot every 4 seconds
 
 function showMobileWarning() {
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
+    if (/Mobi|iPhone|iPad|Android/i.test(navigator.userAgent)) {
         document.getElementById('mobile-warning').style.display = 'block';
         setTimeout(function() {
             document.getElementById('mobile-warning').style.display = 'none';
