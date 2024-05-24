@@ -219,7 +219,7 @@ function showMobileWarning() {
         setTimeout(function() {
             document.getElementById('mobile-warning').style.display = 'none';
             document.getElementById('block_content').style.display = 'block';
-        }, 7000); // 3 seconds
+        }, 10000); // 3 seconds
     } else {
         document.getElementById('block_content').style.display = 'block';
     }
