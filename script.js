@@ -33,15 +33,16 @@ function showContent(section) {
                     <span class="tag"><i class="fa-solid fa-tag"></i> Google Cloud</span>
                 </div>
             </div>
-            <!--<div class="project-box">
-                <img src="logo/Poster_Day.png" alt="Project Thumbnail" onclick="showIPPDF2()">
+            <div class="project-box video">
+                <img src="logo/Poster_Day.png" alt="Project Thumbnail" onclick="redirectToVideo()">
                 <p>Capstone (Presentation): AI powered financial chatbot to extract financial metrics</p>
+                <div class="hover-message">Click to watch Video</div>
                 <div class="tags-container">
                     <span class="tag"><i class="fa-solid fa-tag"></i> Python</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> LLM & NLP</span>
                     <span class="tag"><i class="fa-solid fa-tag"></i> Google Cloud</span>
                 </div>
-            </div>-->
+            </div>
             <div class="project-box">
                 <a href="https://public.tableau.com/app/profile/durga.madhab.dash/vizzes" target="_blank" rel="noopener noreferrer" class="project-link">
                     <img src="logo/Tableau_Data4Good.png" alt="Project Thumbnail">
@@ -140,6 +141,11 @@ function showIPPDF2() {
     var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/FinalPPTIP_v2.pdf';
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
+
+function redirectToVideo() {
+    var videoUrl = 'https://youtu.be/bL0pTJIBaNs?si=tZnb2jhrJTUxtnVD';
+    window.open(videoUrl, '_blank');
+}  
     
 function showCCACPDF() {
     var content = document.getElementById('content');
