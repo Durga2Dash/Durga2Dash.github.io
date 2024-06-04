@@ -126,7 +126,7 @@ function showContent(section) {
 }
 function showResume() {
     var content = document.getElementById('content');
-    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Resume.pdf';
+    var resumeUrl = 'https://storage.googleapis.com/images_ip_2022/Resume2.pdf';
     content.innerHTML = '<object type="application/pdf" width="100%" height="99%" data="' + resumeUrl + '"></object>';
     }
 
