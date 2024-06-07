@@ -234,7 +234,7 @@ function showMobileWarning() {
 window.onload = showMobileWarning;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Site Reliability Engineering", "DevOps", "Laughing at My Own Jokes", "Winning Imaginary Arguments", "Napping"];
+    const roles = ["Data Science", "AI/ML Engineering (Structured Data & NLP)", "Cloud Engineering", "DevOps", "Laughing at My Own Jokes", "Winning Imaginary Arguments", "Napping"];
     let currentRoleIndex = 0;
     const roleElement = document.getElementById('role-changer');
 
