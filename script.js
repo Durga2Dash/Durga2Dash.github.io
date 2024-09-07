@@ -70,18 +70,23 @@ function showContent(section) {
                 </a>
             </div>
             <div class="project-box">
-                <a href="https://www.credly.com/badges/a943f592-f97b-4ba3-88c0-3c3194e0e309" target="_blank" rel="noopener noreferrer" >
-                    <img src="logo/AWS-CloudPractiotioner.jpg" alt="Project Thumbnail">
-                </a>
-            </div>
-            <div class="project-box">
                 <a href="https://www.credly.com/badges/31fc3ba5-c1df-4e9b-9ba5-d7fd78d55d69/public_url" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/AWS-SolutionsArchitect.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
+                <a href="https://www.credly.com/badges/e2834455-42c4-417c-9f21-2598e3310d0d" target="_blank" rel="noopener noreferrer" >
+                    <img src="logo/GoogleAdvAnalytics.jpg" alt="Project Thumbnail">
+                </a>
+            </div>
+            <div class="project-box">
                 <a href="https://www.credly.com/badges/7b9d68ae-14c4-4fe5-b349-1ec48cb602d0" target="_blank" rel="noopener noreferrer" >
                     <img src="logo/AZ900.jpg" alt="Project Thumbnail">
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="https://www.credly.com/badges/a943f592-f97b-4ba3-88c0-3c3194e0e309" target="_blank" rel="noopener noreferrer" >
+                    <img src="logo/AWS-CloudPractiotioner.jpg" alt="Project Thumbnail">
                 </a>
             </div>
             <div class="project-box">
